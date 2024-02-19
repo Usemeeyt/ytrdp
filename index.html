@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yt rdp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+  :root {
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Montserrat", sans-serif;
+  --nav-font: "Lato", sans-serif;
+}
+
+/* Global Colors */
+:root {
+  --background-color: #ffffff;
+  --background-color-rgb: 255, 255, 255;
+  --default-color: #212529;
+  --default-color-rgb: 33, 37, 41;
+  --accent-color: #e84545;
+  --accent-color-rgb: 232, 69, 69;
+  --heading-color: #32353a;
+  --heading-color-rgb: 50, 53, 58;
+  --contrast-color: #ffffff;
+  --contrast-color-rgb: 255, 255, 255;
+}
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: rgba(var(--accent-color-rgb), 0.7);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+   *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+  .nav-link{
+    font-size: 20px;
+
+  }
+  .nav-link:hover{
+    font-size: 22px;
+  }
+  .banner{
+          width: 100%;
+          height: 100vh;
+          background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(pngtree-collaborative-3d-cartoon-characters-working-on-laptops-image_3659936.jpg);
+          background-size: cover;
+          background-position: center;
+          
+        
+        }
+        .first{
+          width: 100%;
+          text-align: center;
+          color: #f5efef;
+          overflow: hidden;
+
+
+        }
+        .first h1{
+          font-size: 60px;
+          margin-top: 40px;
+          color: #fff9f9;
+        }
+        .first p{
+          font-size: 20px;
+        }
+        .first button{
+          width: 200px;
+          padding: 15px 0;
+          text-align: center;
+          margin: 20px 10px;
+          border-radius: 25px;
+          font-weight: bold;
+          border: 2px solid #009688;
+          background: transparent;
+          color: #ebe5e5;
+          cursor: pointer;
+          overflow: hidden;
+          position: relative;
+        }
+        .first span{
+          background: #009688;
+          height: 100%;
+          width: 0;
+          border-radius: 25px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: +1;
+          transition: 0.5s;
+          overflow: hidden;
+
+        }
+        .first button:hover span{
+          width: 100%;
+          height: 15px;
+        }
+        .first button:hover{
+          border: none;
+        }
+        /* Pricing Section - Home Page
+------------------------------*/
+.pricing {
+  padding: 60px 0 120px 0;
+}
+
+.pricing .section-title {
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-align: center;
+}
+.ppp{
+  padding-right: 20px;
+}
+
+
+
+.pricing .pricing-item {
+  box-shadow: 0 3px 20px -2px rgb(138, 138, 174);
+  padding: 60px 40px;
+  height: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+
+.pricing h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.pricing .icon {
+  margin: 30px auto 20px auto;
+  width: 70px;
+  height: 70px;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  transform-style: preserve-3d;
+}
+
+.pricing .icon i {
+  color: var(--background-color);
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+  line-height: 0;
+}
+
+.pricing .icon::before {
+  position: absolute;
+  content: "";
+  height: 86px;
+  width: 86px;
+  border-radius: 50%;
+  background: rgb(92, 11, 173);
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+.pricing .icon::after {
+  position: absolute;
+  content: "";
+  height: 102px;
+  width: 102px;
+  border-radius: 50%;
+  background: black;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-2px);
+}
+
+.pricing h4 {
+  font-size: 48px;
+  color: red;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.pricing h4 sup {
+  font-size: 28px;
+}
+
+.pricing h4 span {
+  color: gray;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.pricing ul {
+  padding: 20px 0;
+  list-style: none;
+  color: black;
+  text-align: left;
+  line-height: 20px;
+}
+
+.pricing ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.pricing ul i {
+  color: orange;
+  font-size: 24px;
+  padding-right: 3px;
+}
+
+.pricing ul .na {
+  color: gray;
+}
+
+.pricing ul .na i {
+  color: gray;
+}
+
+.pricing ul .na span {
+  text-decoration: line-through;
+}
+
+.pricing .buy-btn {
+  color: black;
+  background-color: white;
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  transition: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  transition: 0.3s;
+}
+
+.pricing .buy-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.pricing .featured {
+  z-index: 10;
+  border: 3px solid red;
+}
+
+.pricing .featured .buy-btn {
+  background-color: red;
+  color: wheat;
+}
+
+.pricing .featured .buy-btn:hover {
+  background-color:red;
+}
+
+@media (min-width: 992px) {
+  .pricing .featured {
+    transform: scale(1.15);
+  }
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  --background-color: #f4f4f4;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding-bottom: 50px;
+}
+
+.footer .footer-top {
+  padding-top: 50px;
+}
+
+.footer .footer-about .logo {
+  line-height: 0;
+  margin-bottom: 25px;
+}
+
+.footer .footer-about .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+
+.footer .footer-about .logo span {
+  color: var(--heading-color);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: var(--heading-font);
+}
+
+.footer .footer-about p {
+  font-size: 14px;
+  font-family: var(--heading-font);
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--default-color-rgb), 0.5);
+  font-size: 16px;
+  color: rgba(var(--default-color-rgb), 0.5);
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer h4 {
+  color: var(--heading-color);
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul i {
+  padding-right: 2px;
+  font-size: 12px;
+  line-height: 0;
+}
+
+.footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-links ul a {
+  color: rgba(var(--default-color-rgb), 0.8);
+  display: inline-block;
+  line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+  color: var(--accent-color);
+}
+
+.footer .footer-contact p {
+  margin-bottom: 5px;
+}
+
+.footer .copyright {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgba(var(--default-color-rgb), 0.05);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* Review */
+.review h3 {
+  font-size: 20px;
+}
+
+.review p {
+  line-height: 1.8;
+  font-style: italic;
+  color: #333333;
+}
+
+.review .stars span {
+  color: #FF8803;
+}
+
+.review .stars .muted {
+  color: #ccc;
+}
+
+.review .review-user img {
+  width: 70px;
+  margin: 0 auto;
+}
+/* Testimonial Carousel */
+.testimonials-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #2d71a1;
+}
+
+.testimonials-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #2d71a1;
+}
+
+.first a{
+  color: white;
+}
+
+
+
+       
+</style>
+    <body class="border-0 bd-example m-0 border-0">
+    
+        <nav class="navbar navbar-expand-lg bg-body- bg-secondary ">
+          <div class="container-fluid">
+            <a class="navbar-brand text-bolder text-white" href="#">YT RDP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link active text-white p-2  ms-4" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white p-2 ms-4" href="#ytwatch">YT watchtime RDP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white p-2 ms-4" href="#Revenue">Revenue</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white p-2 ms-4" href="#streming">Streming</a>
+                 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+ <!---------------------------------------------end of menu ------------------------------------------------------------------------>
+
+ <section class="container-fluid banner" id="home">
+  <div class="row">
+    <div class="col">
+  <div class="first">
+  <h1>Youtube RDP</h1>
+  <p>This rdp/vps was only for youtubers its helps to increacess Youtube WatchTime And Views and youtube Revenue etc... <br> some time also increase a youtube subscriber and than 24/7 put live on youtube using obs studio also 24/7 support have</p>
+  <a href="#ytwatch"><button  type="button"> <span> </span>WatchTime</button></a>
+  <a href="#Revenue"><button type="button">  <span></span>REVENUE</button></a>
+</div>
+</div>
+</div>
+</section>
+   
+<!-----------------------------------------------------------------------landing pagd ------------------------------------------------------------->
+           <!-- Pricing Section - Home Page -->
+    <section id="pricing" class="pricing">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="ppp">Pricing</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>YT WatchTime Sliver</h3>
+              <div class="icon">
+                <i class="bi bi-box"></i>
+              </div>
+              <h4 id="ytwatch"><sup></sup>1599rs<span> 1 month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>16 Core Processor </span></li>
+                <li><i class="bi bi-check"></i> <span>RAM 12GB</span></li>
+                <li><i class="bi bi-check"></i> <span>Bandwidth 2TB</span></li>
+                <li class="n"><i class="bi bi-check"></i> <span>Windows 12(64 bit)</span></li>
+                <li class="n"><i class="bi bi-check"></i> <span>50 Chrome Browsers</span></li>
+                <li><i class="bi bi-check"></i> <span>No admin</span></li>
+                <li><i class="bi bi-check"></i> <span>WatchTime increase slow</span></li>
+                <li><i class="bi bi-check"></i> <span>Location -India/USA</span></li>
+              </ul>
+              <div class="text-center"><a href="watchbuy.html" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item featured">
+              <h3>YT WatchTime Gold</h3>
+              <div class="icon">
+                <i class="bi bi-rocket"></i>
+              </div>
+
+              <h4 id="ytwatch"><sup></sup>2499rs<span> 1 month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>16 Core Processor</span></li>
+                <li><i class="bi bi-check"></i> <span>RAM 24GB</span></li>
+                <li><i class="bi bi-check"></i> <span>Bandwidth 2TB</span></li>
+                <li><i class="bi bi-check"></i> <span>Windows 12(64 bit)</span></li>
+                <li><i class="bi bi-check"></i> <span>100+ Chrome Browsers</span></li>
+                <li><i class="bi bi-check"></i> <span>WatchTime increase Fast</span></li>
+                <li><i class="bi bi-check"></i> <span>No admin</span></li>
+                <li><i class="bi bi-check"></i> <span>Location -India/USA</span></li>
+              </ul>
+              <div class="text-center"><a href="watchbuyyt.html" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>YT Revenue Sliver</h3>
+              <div class="icon">
+                <i class="bi bi-send"></i>
+              </div>
+              <h4 id="Revenue"><sup></sup>3299rs<span> 1.5 month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>6 core 12 threads</span></li>
+                <li><i class="bi bi-check"></i> <span>pre-install VPN</span></li>
+                <li><i class="bi bi-check"></i> <span>Revenue increase Software</span></li>
+                <li><i class="bi bi-check"></i> <span>Per day 8 dollar</span></li>
+                <li><i class="bi bi-check"></i> <span>RAM 24GB</span></li>
+                <li><i class="bi bi-check"></i> <span>Windows 11 </span></li>
+                <li><i class="bi bi-check"></i> <span>no admin Access </span></li>
+                <li><i class="bi bi-check"></i> <span>Location USA </span></li>
+              </ul>
+              <div class="text-center"><a href="ytrevenue.html" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>YT Revenue Gold</h3>
+              <div class="icon">
+                <i class="bi bi-send"></i>
+              </div>
+              <h4 id="Revenue"><sup></sup>4999rs<span> 2 month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>16 Core Processor</span></li>
+                <li><i class="bi bi-check"></i> <span>Revenue increase Software</span></li>
+                <li><i class="bi bi-check"></i> <span>Per day 30 dollar</span></li>
+                <li><i class="bi bi-check"></i> <span>RAM 32GB</span></li>
+                <li><i class="bi bi-check"></i> <span>no admin Access</span></li>
+                <li><i class="bi bi-check"></i> <span>Location USA</span></li>
+              </ul>
+              <div class="text-center"><a href="revenue.html" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Streaming RDP Sliver</h3>
+              <div class="icon">
+                <i class="bi bi-send"></i>
+              </div>
+              <h4 id="streming"><sup></sup>1899rs<span> 1 month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>6 Core 12 threads</span></li>
+                <li><i class="bi bi-check"></i> <span>64 GBDDR4 RAM</span></li>
+                <li><i class="bi bi-check"></i> <span>1GBPS Internet speed</span></li>
+                <li><i class="bi bi-check"></i> <span>100GB NVME SSD</span></li>
+                <li><i class="bi bi-check"></i> <span>NO admin Access</span></li>
+              </ul>
+              <div class="text-center"><a href="streeam.html" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Streaming RDP Gold </h3>
+              <div class="icon">
+                <i class="bi bi-send"></i>
+              </div>
+              <h4 id="streming"><sup></sup>2600rs<span> 1 month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>6 Core 12 thread</span></li>
+                <li><i class="bi bi-check"></i> <span>128GB storage 24 GB RAM</span></li>
+                <li><i class="bi bi-check"></i> <span>Bandwidth 2TB</span></li>
+                <li><i class="bi bi-check"></i> <span>NO admin Access</span></li>
+                <li><i class="bi bi-check"></i> <span>Location USA/India</span></li>
+              </ul>
+              <div class="text-center"><a href="streeamgold.html" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section class="section border-top border-bottom">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-4">
+            <h2 class="section-heading">Review From Our Users</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-7">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="review text-center">
+                    <p class="stars">
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill muted"></span>
+                    </p>
+                    <h3>Excellent Website!</h3>
+                    <blockquote>
+                      <p>Amazing website yt rdp website was help to increase my watch time.</p>
+                    </blockquote>
+
+                    <p class="review-user">
+                      <img src="person_2.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
+                      <span class="d-block">
+                        <span class="text-black">Raja</span>, &mdash; web User
+                      </span>
+                    </p>
+
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="review text-center">
+                    <p class="stars">
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill muted"></span>
+                    </p>
+                    <h3>This yt rdp is easy to use!</h3>
+                    <blockquote>
+                      <p>Now i am rich means YT RDP is reason because revenue rdp is help me my family</p>
+                    </blockquote>
+
+                    <p class="review-user">
+                      <img src="person_1.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
+                      <span class="d-block">
+                        <span class="text-black">devil</span>, &mdash; web User
+                      </span>
+                    </p>
+
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="review text-center">
+                    <p class="stars">
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill"></span>
+                      <span class="bi bi-star-fill muted"></span>
+                    </p>
+                    <h3>Awesome functionality!</h3>
+                    <blockquote>
+                      <p>supper website i am use this website now my channel was 72k subscribers have thanks for this website</p>
+                    </blockquote>
+
+                    <p class="review-user">
+                      <img src="person_3.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
+                      <span class="d-block">
+                        <span class="text-black">lax</span>, &mdash; web User
+                      </span>
+                    </p>
+
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Testimonials Section -->
+
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span>YT RDP</span>
+        </a>
+        <p>This rdp/vps was only for youtubers its helps to increacess Youtube WatchTime And Views and youtube Revenue ect..</p>
+        <div class="social-links d-flex mt-4">
+          <a href=""><i class="bi bi-twitter"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">YT WatchTime</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Streming</a></li>
+          <li><a href="#">YT Revenue</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Subscribe increase</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">Youtube promation</a></li>
+          <li><a href="#">WatchTime increacess</a></li>
+          <li><a href="#">Revenue increase</a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p class="mt-4"><strong>Phone:</strong> <span>+91 9342196907</span></p>
+        <p><strong>Email:</strong> <span>usemeeyt@gmail.com</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>&copy; <span>Copyright</span> <strong class="px-1">yt rdp</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you've purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      Designed by <a href="https://www.youtube.com/@usemee">usemee</a>
+    </div>
+  </div>
+
+</footer><!-- End Footer -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/65c4a24b0ff6374032caafae/1hm41ju1u';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+
+</body>
+
+  
+</html>
